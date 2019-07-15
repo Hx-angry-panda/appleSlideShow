@@ -6,7 +6,8 @@ $buttons.on('click', function(e){
     e.preventDefault()  
 })
 
-$buttons.eq(0).addClass('active')
+$buttons.eq(0).addClass('liActive')
+$('.buttonsBar > li > a > img').eq(0).addClass('imgActive')
 
 bindEvent()
 
@@ -22,8 +23,10 @@ function bindEvent() {
 //轮播
 function goToSlide(index){
     $('#slides').css({'transform': `translateX(${-(index*920)}px)`})
-    $buttons.removeClass('active')
-    $buttons.eq(index).addClass('active')
+    $buttons.removeClass('liActive')
+    $('.buttonsBar > li > a > img').removeClass('imgActive')
+    $buttons.eq(index).addClass('liActive')
+    $('.buttonsBar > li > a > img').eq(index).addClass('imgActive')
     current = current + 1
     if (current > $buttons.length - 1){
         current = 0

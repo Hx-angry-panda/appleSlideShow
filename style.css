@@ -5,6 +5,7 @@
 a{
     text-decoration: none;
     color: #0196e3;
+    cursor: default;
 }
 ul li{
     list-style: none;
@@ -63,14 +64,20 @@ main{
     width: 60px;
     height: 45px;
     margin-right: -1px;
+}
+.buttonsBar > li > a > img:hover{
     cursor: pointer;
 }
 .buttonsBar > li:hover{
-    background: url(./img/pic_bg.png)
+    background: url(./img/pic_bg.png);
+    cursor: pointer;
 }
-.buttonsBar > li.active{
+.buttonsBar > li > a > img.imgActive{
     cursor: default;
-    background: url(./img/active_bg.png)
+}
+.buttonsBar > li.liActive{
+    cursor: default;
+    background: url(./img/active_bg.png);
 }
 .buttonsBar > li img{
     margin-top: 10px;

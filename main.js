@@ -35,3 +35,13 @@ let timer = setInterval(function(){
     goToSlide(current)
 },3000)
 
+//切换标签页暂停自动播放
+document.addEventListener("visibilitychange", function () {
+    if (document.hidden){
+        clearInterval(timer)
+    }else{
+        timer = setInterval(function(){
+            goToSlide(current)
+        },3000)
+    }
+})
